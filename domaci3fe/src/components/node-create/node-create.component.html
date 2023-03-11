@@ -1,0 +1,20 @@
+<div class="container">
+
+
+  <form name="search" (submit)="create()" class="mb-5">
+    <div class="form-group">
+      <label for="name">Enter the name of the node you wish to create </label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="name" required [(ngModel)]="name"/>
+      <br>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+
+
+  <div *ngIf="errorMessage != ''">
+    <label style="color: red"> {{ errorMessage }} </label>
+  </div>
+
+  <div *ngIf="successMessage != ''">
+    <label style="color: green"> {{ successMessage }} </label>
+  </div>

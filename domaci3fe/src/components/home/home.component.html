@@ -1,0 +1,17 @@
+<div>
+<h2>User management</h2>
+  <div>
+    <a [routerLink]="'/login'">
+      <span>Login</span>
+    </a>
+    <br>
+    <a *ngIf="readPermission" [routerLink]="'/list-users'">
+      <span>List Users</span>
+    </a>
+    <br>
+    <a *ngIf="createPermission" [routerLink]="'/add-users'">
+      <span>Add users</span>
+    </a>
+  </div>
+<router-outlet></router-outlet>
+</div>
